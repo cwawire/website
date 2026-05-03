@@ -24,8 +24,8 @@ body {
 }
 
 .hero img {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #1e293b;
@@ -37,7 +37,7 @@ body {
 
 .hero-text p {
   color: #94a3b8;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* LINKS */
@@ -48,21 +48,48 @@ body {
   flex-wrap: wrap;
 }
 
-.links a {
-  font-size: 13px;
+.links a, .email-copy {
+  font-size: 14px;
   color: #60a5fa;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.links a:hover {
-  text-decoration: underline;
+/* TOOLTIP */
+.email-copy {
+  position: relative;
 }
 
-/* TABS */
+.tooltip {
+  position: absolute;
+  bottom: -34px;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: #020617;
+  color: #e2e8f0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.email-copy:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.tooltip.copied {
+  background: #16a34a;
+  color: white;
+}
+
+/* NAV TABS */
 .tabs {
   display: flex;
-  gap: 20px;
-  padding: 15px;
+  gap: 25px;
+  padding: 18px;
   border-top: 1px solid #1e293b;
   border-bottom: 1px solid #1e293b;
   overflow-x: auto;
@@ -73,14 +100,31 @@ body {
   border: none;
   color: #94a3b8;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 17px;
+  font-weight: 600;
   padding: 8px 10px;
-  flex-shrink: 0;
+  position: relative;
 }
 
+/* ACTIVE TAB */
 .tabs button.active {
   color: #3b82f6;
-  border-bottom: 2px solid #3b82f6;
+}
+
+/* UNDERLINE ANIMATION */
+.tabs button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.tabs button.active::after {
+  width: 100%;
 }
 
 /* SECTION */
@@ -89,38 +133,50 @@ body {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
 }
 
 .section.active {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* IMPACT GRID */
+/* IMPACT */
 .impact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 20px;
 }
 
 .impact div {
   background: #1e293b;
-  padding: 15px;
-  border-radius: 8px;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 
 .impact h3 {
   color: #3b82f6;
+  font-size: 30px;
+  font-weight: 700;
 }
 
-/* IMPACT BULLETS */
+.impact p {
+  font-size: 15px;
+  color: #cbd5f5;
+}
+
+/* IMPACT LIST */
 .impact-list {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .impact-list li {
-  margin-bottom: 10px;
-  line-height: 1.5;
+  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 /* PROJECT */
@@ -128,35 +184,42 @@ body {
   display: flex;
   gap: 20px;
   background: #1e293b;
-  padding: 15px;
+  padding: 18px;
   border-radius: 10px;
   margin-top: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
 .project img {
   width: 100%;
   max-width: 220px;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.04);
 }
 
 .project div {
   flex: 1;
 }
 
-.project p {
-  font-size: 14px;
-  color: #cbd5f5;
-}
-
 /* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 10px;
-  padding: 6px 12px;
+  padding: 7px 14px;
   background: #3b82f6;
   color: white;
   border-radius: 6px;
   text-decoration: none;
+  font-size: 14px;
 }
 
 /* FOOTER */
@@ -187,15 +250,19 @@ footer {
     <h1>Clyde Wawire</h1>
 
     <p>
-      Most of my work involves looking at performance data to understand what’s working, what isn’t, and where improvements can be made.
+      I work with performance data to understand how operations are running, where time is being lost, and how things can be improved.
     </p>
 
     <p>
-      Drove a 25% productivity increase by improving workforce utilization, reducing idle time, and accelerating reporting cycles.
+      Delivered a 25% productivity gain by improving utilization, reducing idle time, and speeding up reporting.
     </p>
 
     <div class="links">
-      <a href="mailto:clydewawire18@gmail.com">Email</a>
+      <div class="email-copy" onclick="copyEmail()">
+        Email
+        <span id="email-tooltip" class="tooltip">clydewawire18@gmail.com</span>
+      </div>
+
       <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a>
       <a href="https://github.com/cwawire" target="_blank">GitHub</a>
       <a href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">CV</a>
@@ -218,15 +285,15 @@ footer {
     <div><h3>95%</h3><p>Occupancy</p></div>
     <div><h3>3%</h3><p>Idle Time</p></div>
     <div><h3>95%</h3><p>Quality</p></div>
-    <div><h3>85–92%</h3><p>Utilization Range</p></div>
+    <div><h3>85–92%</h3><p>Utilization</p></div>
   </div>
 
   <ul class="impact-list">
-    <li>Achieved and sustained <b>95% workforce occupancy</b>, ensuring optimal capacity utilization</li>
-    <li>Reduced idle time to <b>3%</b>, minimizing unproductive hours</li>
-    <li>Maintained <b>95% quality performance</b> across operations</li>
-    <li>Optimized billable hour allocation within the <b>85–92% target range</b></li>
-    <li>Enabled a <b>25% increase in productivity</b> through performance insights</li>
+    <li>Achieved and sustained <b>95% workforce occupancy</b></li>
+    <li>Reduced idle time to <b>3%</b></li>
+    <li>Maintained <b>95% quality performance</b></li>
+    <li>Optimized billable hours within <b>85–92%</b> target range</li>
+    <li>Enabled a <b>25% productivity increase</b></li>
   </ul>
 
 </div>
@@ -239,8 +306,8 @@ footer {
     <div>
       <h3>Credit Risk Model</h3>
       <p><b>Problem:</b> Identify high-risk borrowers</p>
-      <p><b>Approach:</b> Built scoring model using behavioral data</p>
-      <p><b>Result:</b> Improved risk-based lending decisions</p>
+      <p><b>Approach:</b> Built scoring model</p>
+      <p><b>Result:</b> Improved risk-based decisions</p>
       <a class="btn" href="https://github.com/cwawire/Credit-Risk-Modelling-Credit-Scoring" target="_blank">View Project</a>
     </div>
   </div>
@@ -249,9 +316,9 @@ footer {
     <img src="assets/airline.jpg">
     <div>
       <h3>Airline Price Prediction</h3>
-      <p><b>Problem:</b> Price variability across routes</p>
+      <p><b>Problem:</b> Price variability</p>
       <p><b>Approach:</b> Built regression model</p>
-      <p><b>Result:</b> Identified key pricing drivers</p>
+      <p><b>Result:</b> Identified key drivers</p>
       <a class="btn" href="https://github.com/cwawire/Airline-Ticket-Price-Prediction" target="_blank">View Project</a>
     </div>
   </div>
@@ -262,17 +329,13 @@ footer {
 <div id="background" class="section">
   <p>
     Data Analyst with 5+ years of experience in performance analytics, operational efficiency, and reporting.
-    Skilled in SQL, Python, and translating complex data into actionable insights.
   </p>
-
   <a class="btn" href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">Open CV</a>
 </div>
 
 <!-- INSIGHTS -->
 <div id="insights" class="section">
-  <p>
-    Sharing insights on data, performance optimization, and analytics in real-world operations.
-  </p>
+  <p>Insights and articles coming soon.</p>
 </div>
 
 <!-- FOOTER -->
@@ -283,11 +346,32 @@ footer {
 
 <script>
 function showTab(evt, tabId) {
-  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-  document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+  const sections = document.querySelectorAll(".section");
+  const buttons = document.querySelectorAll(".tab-btn");
 
-  document.getElementById(tabId).classList.add("active");
+  sections.forEach(s => s.classList.remove("active"));
+  buttons.forEach(b => b.classList.remove("active"));
+
+  setTimeout(() => {
+    document.getElementById(tabId).classList.add("active");
+  }, 50);
+
   evt.currentTarget.classList.add("active");
+}
+
+function copyEmail() {
+  const email = "clydewawire18@gmail.com";
+  const tooltip = document.getElementById("email-tooltip");
+
+  navigator.clipboard.writeText(email);
+
+  tooltip.innerText = "Copied ✓";
+  tooltip.classList.add("copied");
+
+  setTimeout(() => {
+    tooltip.innerText = email;
+    tooltip.classList.remove("copied");
+  }, 1500);
 }
 </script>
 
