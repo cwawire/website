@@ -1,186 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clyde Wawire | Data Analyst</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #0f172a;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.1em;
-    }
-    section {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      color: #0f172a;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 5px;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .projects a {
-      font-weight: bold;
-    }
-    footer {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 60px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clyde Wawire | Data Analyst</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+}
+
+.hero img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 4px solid #3b82f6;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 {
+  font-size: 2.8em;
+  margin: 0;
+}
+
+.hero-text p {
+  margin: 10px 0;
+  color: #94a3b8;
+}
+
+.links a {
+  margin-right: 15px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* SECTION */
+section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 8px;
+}
+
+/* PROJECT CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.tag {
+  font-size: 12px;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+/* EXPERIENCE */
+.exp {
+  display: grid;
+  gap: 20px;
+}
+
+.exp div {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #94a3b8;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>Clyde Wawire</h1>
-  <p>Data Analyst | Operational & Business Analytics | SQL, Python, BI</p>
-  <p>
-    <a href="mailto:clydewawire18@gmail.com">Email</a> | 
-    <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a> | 
-    <a href="https://github.com/cwawire" target="_blank">GitHub</a> | 
-    <a href="https://medium.com/@clydewawire18" target="_blank">Blog</a>
-  </p>
-</header>
+<!-- HERO -->
+<section class="hero">
+  <img src="profile.jpg" alt="Clyde">
 
-<section>
-  <h2>Profile</h2>
-  <div class="card">
-    <p>
-      Data Analyst with over five years of experience improving operational performance through data. 
-      I specialize in turning complex, real-world data into actionable insights that support decision-making, 
-      optimize workflows, and improve efficiency across teams.
-    </p>
+  <div class="hero-text">
+    <h1>Clyde Wawire</h1>
+    <p>Data Analyst focused on performance, operations, and decision-making.</p>
+    <p>I help teams understand what’s driving results — and what to fix.</p>
+
+    <div class="links">
+      <a href="mailto:clydewawire18@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a>
+      <a href="https://github.com/cwawire" target="_blank">GitHub</a>
+    </div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section>
-  <h2>Core Skills</h2>
-  <div class="card">
-    <ul>
-      <li>SQL & Python (Pandas, NumPy, Scikit-learn)</li>
-      <li>Power BI & Data Visualization</li>
-      <li>Operational & Workforce Analytics</li>
-      <li>Analytics & Reporting Automation</li>
-      <li>Machine Learning & Predictive Modeling</li>
-      <li>Data Cleaning & Transformation</li>
-      <li>Business Intelligence & Data Storytelling</li>
-    </ul>
+  <h2>Selected Work</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/airline.png" style="width:100%; border-radius:8px; margin-bottom:10px;">
+
+      <div class="tag">Machine Learning</div>
+      <h3>Airline Ticket Price Prediction</h3>
+
+      <p>Predicting ticket prices based on demand, timing, and route variables.</p>
+
+      <a class="btn" href="airline.html">View Case Study</a>
+      <a class="btn" href="https://github.com/cwawire/Airline-Ticket-Price-Prediction.git" target="_blank">GitHub</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/credit.png" style="width:100%; border-radius:8px; margin-bottom:10px;">
+
+      <div class="tag">Credit Risk</div>
+      <h3>Credit Scoring Model</h3>
+
+      <p>Simulating lending decisions and identifying default risk.</p>
+
+      <a class="btn" href="credit.html">View Case Study</a>
+      <a class="btn" href="https://github.com/cwawire/Credit-Risk-Modelling-Credit-Scoring.git" target="_blank">GitHub</a>
+    </div>
+
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section>
-  <h2>Professional Experience</h2>
+  <h2>Experience</h2>
 
-  <div class="card">
-    <h3>Data Analyst – Samasource (2022 – Present)</h3>
-    <ul>
-      <li>Built and automated dashboards to monitor operational performance, reducing reporting turnaround time by 20%.</li>
-      <li>Analyzed workforce data to improve utilization to 95% and reduce idle time.</li>
-      <li>Delivered performance insights supporting data-driven decision-making across operations teams.</li>
-      <li>Resolved data discrepancies and improved reporting accuracy, reducing client escalations.</li>
-    </ul>
-  </div>
+  <div class="exp">
 
-  <div class="card">
-    <h3>Team Captain – Data Annotation & Analytics, CloudFactory (2019 – 2022)</h3>
-    <ul>
-      <li>Led distributed analytics teams across finance, healthcare, and e-commerce projects.</li>
-      <li>Improved team productivity by 30% through process optimization and training.</li>
-      <li>Maintained high data quality standards with zero compliance breaches.</li>
-    </ul>
-  </div>
-</section>
+    <div>
+      <h3>Data Analyst — Samasource</h3>
+      <p>Improved utilization to 95%, reduced idle time, and automated reporting.</p>
+    </div>
 
-<section class="projects">
-  <h2>Featured Projects</h2>
+    <div>
+      <h3>Team Captain — CloudFactory</h3>
+      <p>Led analytics teams and improved productivity by 30%.</p>
+    </div>
 
-  <div class="card">
-    <h3>African Airline Ticket Price Prediction (End-to-End ML)</h3>
-    <p>
-      Built a full machine learning pipeline to predict airline ticket prices for major African airlines. 
-      The project includes data generation, feature engineering, model training, evaluation, and deployment using Streamlit.
-    </p>
-    <p>
-      <strong>Technologies:</strong> Python, Pandas, Scikit-learn, Streamlit
-    </p>
-    <p>
-      🔗 <a href="https://github.com/cwawire/Airline-Ticket-Price-Prediction.git">View Project</a>
-    </p>
-    <p>
-  🔗 <a href="https://mediaeval-unexpected-alisha.ngrok-free.dev/" target="_blank">Live Demo</a>
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Credit Risk Modelling & Credit Scoring (Kenya Fintech Simulation)</h3>
-    <p>
-      Developed an end-to-end credit risk model simulating how fintech lenders assess borrower risk in data-constrained environments. 
-      The project includes data generation, exploratory analysis, model development using a Decision Tree, and a credit scoring system (300–850).
-    </p>
-    <p>
-      The model was deployed using Gradio to enable real-time risk prediction and credit score generation based on borrower characteristics.
-    </p>
-    <p>
-      <strong>Technologies:</strong> Python, Pandas, Scikit-learn, Gradio, Matplotlib, Seaborn
-    </p>
-    <p>
-      🔗 <a href="https://github.com/cwawire/Credit-Risk-Modelling-Credit-Scoring.git" target="_blank">View Project</a>
-    </p>
-    <p>
-  🔗 <a href="http://127.0.0.1:7861//" target="_blank">Live Demo</a>
-    </p>
-  </div>
-
-</section>
-
-<section>
-  <h2>Education & Certifications</h2>
-  <div class="card">
-    <ul>
-      <li>MSc Data Science – University of East London (Ongoing)</li>
-      <li>BSc Economics & Statistics – Egerton University</li>
-      <li>CIFA II – KASNEB (Ongoing)</li>
-    </ul>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Clyde Wawire | Data Analytics Portfolio</p>
+  <p>© 2026 Clyde Wawire</p>
 </footer>
 
 </body>
