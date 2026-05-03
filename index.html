@@ -85,7 +85,7 @@ body {
   color: white;
 }
 
-/* NAV TABS */
+/* NAV */
 .tabs {
   display: flex;
   gap: 25px;
@@ -106,12 +106,10 @@ body {
   position: relative;
 }
 
-/* ACTIVE TAB */
 .tabs button.active {
   color: #3b82f6;
 }
 
-/* UNDERLINE ANIMATION */
 .tabs button::after {
   content: "";
   position: absolute;
@@ -169,14 +167,12 @@ body {
   color: #cbd5f5;
 }
 
-/* IMPACT LIST */
 .impact-list {
   margin-top: 30px;
 }
 
 .impact-list li {
   margin-bottom: 12px;
-  line-height: 1.6;
 }
 
 /* PROJECT */
@@ -219,7 +215,6 @@ body {
   color: white;
   border-radius: 6px;
   text-decoration: none;
-  font-size: 14px;
 }
 
 /* FOOTER */
@@ -248,17 +243,14 @@ footer {
 
   <div class="hero-text">
     <h1>Clyde Wawire</h1>
-
-    <p style="font-size: 15px; color: #3b82f6; margin-top: -5px;">
-        Data Analyst | Performance Analytics | Operational Analytics
-    </p>
-
-      <p>
-          I analyze operational performance data to evaluate team efficiency, identify performance gaps, and drive measurable improvements.
-      </p>
+    <p style="color:#3b82f6;">Data Analyst | Performance Analytics | Business Intelligence</p>
 
     <p>
-      Delivered a 25% productivity gain by improving utilization, reducing idle time, and speeding up reporting.
+      Data Analyst with 5+ years of experience working with performance and behavioral data to understand how systems, teams, and users operate, identify gaps, and drive measurable improvements.
+    </p>
+
+    <p>
+      Delivered a 25% productivity gain by improving utilization, reducing idle time, and accelerating reporting workflows.
     </p>
 
     <div class="links">
@@ -266,7 +258,6 @@ footer {
         Email
         <span id="email-tooltip" class="tooltip">clydewawire18@gmail.com</span>
       </div>
-
       <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a>
       <a href="https://github.com/cwawire" target="_blank">GitHub</a>
       <a href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">CV</a>
@@ -279,12 +270,11 @@ footer {
   <button class="tab-btn active" onclick="showTab(event,'impact')">Impact</button>
   <button class="tab-btn" onclick="showTab(event,'projects')">Projects</button>
   <button class="tab-btn" onclick="showTab(event,'background')">Background</button>
-  <button class="tab-btn" onclick="showTab(event,'insights')">Articles & Insights</button>
+  <button class="tab-btn" onclick="showTab(event,'insights')">Insights & Articles</button>
 </div>
 
 <!-- IMPACT -->
 <div id="impact" class="section active">
-
   <div class="impact">
     <div><h3>95%</h3><p>Occupancy</p></div>
     <div><h3>3%</h3><p>Idle Time</p></div>
@@ -292,23 +282,17 @@ footer {
     <div><h3>85–92%</h3><p>Utilization</p></div>
   </div>
 
-  <ul>
-  <li>Drove workforce efficiency by achieving <b>95% occupancy</b> and maintaining optimal capacity utilization</li>
-  
-  <li>Improved operational efficiency by reducing idle time to <b>3%</b></li>
-  
-  <li>Ensured consistent service delivery by sustaining <b>95% quality performance</b></li>
-  
-  <li>Optimized billable time allocation within the <b>85–92% target range</b> across key operational activities</li>
-  
-  <li>Enabled a <b>25% productivity improvement</b> through data-driven performance insights</li>
-</ul>
-
+  <ul class="impact-list">
+    <li>Achieved and sustained <b>95% workforce occupancy</b></li>
+    <li>Reduced idle time to <b>3%</b></li>
+    <li>Maintained <b>95% quality performance</b></li>
+    <li>Optimized billable hours within <b>85–92%</b> target range</li>
+    <li>Enabled a <b>25% productivity increase</b></li>
+  </ul>
 </div>
 
 <!-- PROJECTS -->
 <div id="projects" class="section">
-
   <div class="project">
     <img src="assets/credit.jpg">
     <div>
@@ -330,26 +314,32 @@ footer {
       <a class="btn" href="https://github.com/cwawire/Airline-Ticket-Price-Prediction" target="_blank">View Project</a>
     </div>
   </div>
-
 </div>
 
 <!-- BACKGROUND -->
 <div id="background" class="section">
   <p>
-      Data Analyst with over 5 years of experience analyzing operational performance data to improve efficiency, track key metrics, and support data-driven decision-making.
-</p>
-  <a class="btn" href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">Open CV</a>
+    Most of my work has been focused on analyzing performance data, building reporting systems, and helping teams understand how they are performing and where improvements can be made.
+  </p>
 </div>
 
 <!-- INSIGHTS -->
 <div id="insights" class="section">
-  <p>Insights and articles coming soon.</p>
+  <div class="project">
+    <div>
+      <h3>Why Most Dashboards Fail to Drive Decisions</h3>
+      <p style="font-size:12px; color:#94a3b8;">Published on Medium</p>
+      <p>
+        Most dashboards track metrics—but very few actually influence decisions. This article explores why dashboards fail in real-world teams and how to make data truly actionable.
+      </p>
+      <a class="btn" href="https://medium.com/@clydewawire18/YOUR-ARTICLE-LINK" target="_blank">Read Article</a>
+    </div>
+  </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <p>© 2026 Clyde Wawire</p>
-  <p>Data Analyst | SQL • Python • BI</p>
 </footer>
 
 <script>
