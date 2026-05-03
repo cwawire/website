@@ -134,7 +134,8 @@ h2 {
 }
 
 .featured-project img {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   border-radius: 10px;
 }
 
@@ -212,6 +213,17 @@ footer {
 }
 
 /* MOBILE */
+  @media (max-width: 768px) {
+  .featured-project {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-project img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .hero { flex-direction: column; text-align: center; }
   .featured-project { flex-direction: column; }
