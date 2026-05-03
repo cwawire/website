@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clyde Wawire | Data Analyst</title>
 
+<!-- ICONS -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
 <style>
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
@@ -13,14 +18,14 @@ body {
   color: #e2e8f0;
 }
 
+/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
-  width: 100%;
   background: #020617;
   padding: 15px 20px;
-  z-index: 1000;
   border-bottom: 1px solid #1e293b;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -31,77 +36,53 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
 .nav-links a {
   margin-left: 20px;
   text-decoration: none;
   color: #94a3b8;
-  font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #3b82f6;
 }
 
 /* HERO */
 .hero {
   display: flex;
+  gap: 50px;
   align-items: center;
   justify-content: center;
-  gap: 50px;
-  padding: 90px 20px;
   max-width: 1000px;
   margin: auto;
-  background: #020617;
-  border-radius: 20px;
+  padding: 100px 20px;
 }
 
 .hero img {
   width: 170px;
   height: 170px;
   border-radius: 50%;
-  border: 4px solid #3b82f6;
   object-fit: cover;
+  border: 4px solid #3b82f6;
 }
 
 .hero-text {
   max-width: 520px;
-  font-size: 1.15em;
-  line-height: 1.7;
+  font-size: 1.1em;
 }
 
-.hero-text h1 {
-  font-size: 2.8em;
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.hero-text p {
-  margin: 10px 0;
-  color: #94a3b8;
-}
-
+/* LINKS */
 .links a {
   margin-right: 15px;
+  font-size: 20px;
   color: #60a5fa;
-  text-decoration: none;
-  font-weight: 500;
-  cursor: pointer;
 }
 
 .links a:last-child {
   background: #3b82f6;
-  padding: 6px 12px;
+  padding: 8px;
   border-radius: 6px;
   color: white;
-}
-
-.links a:hover {
-  text-decoration: underline;
 }
 
 /* SECTION */
@@ -116,142 +97,182 @@ h2 {
   padding-bottom: 8px;
 }
 
-.links a:nth-child(4) {
-  color: #38bdf8;
-}
-
-/* PROJECT CARDS */
-.grid {
+/* IMPACT */
+.impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-.tag {
-  font-size: 12px;
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 14px;
-  background: #3b82f6;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 0.85em;
-}
-
-/* EXPERIENCE */
-.exp {
-  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
 
-.exp div {
+.impact-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.impact-card h3 {
+  color: #3b82f6;
+  font-size: 2em;
+}
+
+/* TOOLS */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.tool-card {
   background: #1e293b;
   padding: 20px;
   border-radius: 10px;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #94a3b8;
+/* PROJECTS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* INSIGHTS */
+.insights-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.insight-card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <img src="profile.jpg" alt="Clyde">
-
-  <div class="hero-text">
-  <h1>Clyde Wawire</h1>
-
-  <p>
-    I analyze operational and performance data to understand what’s driving results and where improvements can be made.
-  </p>
-
-  <p>
-    My work focuses on identifying inefficiencies, improving performance, and turning complex data into clear, actionable insights.
-  </p>
-
-  <div class="links">
-    <a href="mailto:clydewawire18@gmail.com?subject=Hello Clyde">Email</a>
-    <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a>
-    <a href="https://github.com/cwawire" target="_blank">GitHub</a>
-    <a href="https://medium.com/@clydewawire18" target="_blank">Articles</a>
-    <a href="Clyde_Wawire_CV.pdf" target="_blank">Download CV</a>
-  </div>
-</div>
-</section>
-
-<!-- PROJECTS -->
-<section>
-  <h2>Selected Work</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="assets/airline.jpg" style="width:100%; border-radius:8px; margin-bottom:10px;">
-
-      <div class="tag">Machine Learning</div>
-      <h3>Airline Ticket Price Prediction</h3>
-
-      <p>Predicting ticket prices based on demand, timing, and route variables.</p>
-
-      <a class="btn" href="airline.html">View Case Study</a>
-      <a class="btn" href="https://github.com/cwawire/Airline-Ticket-Price-Prediction.git" target="_blank">GitHub</a>
-    </div>
-
-    <div class="card">
-      <img src="assets/credit.jpg" style="width:100%; border-radius:8px; margin-bottom:10px;">
-
-      <div class="tag">Credit Risk</div>
-      <h3>Credit Scoring Model</h3>
-
-      <p>Simulating lending decisions and identifying default risk.</p>
-
-      <a class="btn" href="credit.html">View Case Study</a>
-      <a class="btn" href="https://github.com/cwawire/Credit-Risk-Modelling-Credit-Scoring.git" target="_blank">GitHub</a>
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Clyde Wawire</p>
-</footer>
-
-</body>
-
+<!-- NAV -->
 <nav class="navbar">
   <div class="nav-container">
-    <div class="logo">Clyde</div>
-
+    <div>Clyde</div>
     <div class="nav-links">
-      <a href="#work">Work</a>
+      <a href="#impact">Impact</a>
+      <a href="#tools">Tools</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#insights">Insights</a>
     </div>
   </div>
 </nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="assets/profile.jpg">
+
+  <div class="hero-text">
+    <h1>Hi, I’m Clyde.</h1>
+
+    <p>I work with data to understand how teams perform, what’s slowing things down, and where to improve.</p>
+
+    <div class="links">
+      <a href="mailto:clydewawire18@gmail.com"><i data-lucide="mail"></i></a>
+      <a href="https://linkedin.com/in/clyde-wawire" target="_blank"><i data-lucide="linkedin"></i></a>
+      <a href="https://github.com/cwawire" target="_blank"><i data-lucide="github"></i></a>
+      <a href="https://medium.com/@clydewawire18" target="_blank"><i data-lucide="book-open"></i></a>
+      <a href="Clyde_Wawire_CV.pdf" target="_blank"><i data-lucide="file-text"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+  <h2>Impact</h2>
+  <div class="impact-grid">
+    <div class="impact-card"><h3>95%</h3><p>Utilization achieved</p></div>
+    <div class="impact-card"><h3>3%</h3><p>Idle time reduced</p></div>
+    <div class="impact-card"><h3>20%</h3><p>Faster reporting</p></div>
+    <div class="impact-card"><h3>25%</h3><p>Productivity increase</p></div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section id="tools">
+  <h2>How I Work</h2>
+  <div class="tools-grid">
+    <div class="tool-card"><h3>SQL</h3><p>Querying & analysis</p></div>
+    <div class="tool-card"><h3>Python</h3><p>Data analysis & modeling</p></div>
+    <div class="tool-card"><h3>Power BI</h3><p>Dashboards & reporting</p></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/airline.png">
+      <h3>Airline Price Prediction</h3>
+      <a class="btn" href="airline.html">Case Study</a>
+    </div>
+
+    <div class="card">
+      <img src="assets/credit.png">
+      <h3>Credit Risk Model</h3>
+      <a class="btn" href="credit.html">Case Study</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights">
+  <h2>Insights</h2>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <h3>Why dashboards fail</h3>
+      <a href="https://medium.com/@clydewawire18" target="_blank">Read →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
 </html>
