@@ -143,7 +143,53 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
 }
+/* PROJECT ROW */
+.project-row {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-top: 30px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
 
+/* HOVER EFFECT */
+.project-row:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* IMAGE */
+.project-row img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXT */
+.project-content {
+  flex: 1;
+}
+
+.project-content h3 {
+  margin-top: 0;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-row img {
+    width: 100%;
+    height: auto;
+  }
+}
 /* CV SECTION */
 .cv-box {
   background: #1e293b;
@@ -233,22 +279,36 @@ h2 {
 <section id="projects">
 <h2>Selected Work</h2>
 
-<div class="project">
-<img src="assets/airline.jpg">
-<h3>Airline Price Prediction</h3>
-<p><b>Problem:</b> Pricing fluctuates based on demand.</p>
-<p><b>Approach:</b> Built ML model with feature engineering.</p>
-<p><b>Result:</b> Improved pricing insights.</p>
-<a class="btn" href="airline.html">View Case Study</a>
+<div class="project-row">
+
+  <img src="assets/airline.jpg">
+
+  <div class="project-content">
+    <h3>Airline Price Prediction</h3>
+
+    <p><b>Problem:</b> Pricing fluctuates based on demand and timing.</p>
+    <p><b>Approach:</b> Built a machine learning model with feature engineering.</p>
+    <p><b>Result:</b> Improved pricing insight and understanding of key drivers.</p>
+
+    <a class="btn" href="airline.html">View Case Study</a>
+  </div>
+
 </div>
 
-<div class="project">
-<img src="assets/credit.jpg">
-<h3>Credit Risk Model</h3>
-<p><b>Problem:</b> Assess borrower default risk.</p>
-<p><b>Approach:</b> Built scoring model.</p>
-<p><b>Result:</b> Enabled risk-based decisions.</p>
-<a class="btn" href="credit.html">View Case Study</a>
+<div class="project-row">
+
+  <img src="assets/credit.jpg">
+
+  <div class="project-content">
+    <h3>Credit Risk Model</h3>
+
+    <p><b>Problem:</b> Need to assess borrower default risk.</p>
+    <p><b>Approach:</b> Built a credit scoring model.</p>
+    <p><b>Result:</b> Enabled risk-based lending decisions.</p>
+
+    <a class="btn" href="credit.html">View Case Study</a>
+  </div>
+
 </div>
 
 </section>
