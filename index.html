@@ -46,6 +46,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .links a, .email-copy {
@@ -53,6 +54,7 @@ body {
   color: #60a5fa;
   text-decoration: none;
   cursor: pointer;
+  line-height: 32px;
 }
 
 /* TOOLTIP */
@@ -85,8 +87,36 @@ body {
   color: white;
 }
 
+/* BUTTON (PREMIUM) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, #3B82F6, #2563EB);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59,130,246,0.35);
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(59,130,246,0.25);
+}
+
 /* NAV */
 .tabs {
+  position: relative;
   display: flex;
   gap: 25px;
   padding: 18px;
@@ -104,25 +134,21 @@ body {
   font-weight: 600;
   padding: 8px 10px;
   position: relative;
+  z-index: 1;
 }
 
 .tabs button.active {
   color: #3b82f6;
 }
 
-.tabs button::after {
-  content: "";
+/* SLIDING INDICATOR */
+.tab-indicator {
   position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
+  bottom: 0;
   height: 2px;
+  width: 0;
   background: #3b82f6;
-  transition: width 0.3s ease;
-}
-
-.tabs button.active::after {
-  width: 100%;
+  transition: all 0.3s ease;
 }
 
 /* SECTION */
@@ -167,10 +193,6 @@ body {
   color: #cbd5f5;
 }
 
-.impact ul {
-  margin-top: 25px;
-}
-
 /* PROJECT */
 .project {
   display: flex;
@@ -191,23 +213,6 @@ body {
   width: 100%;
   max-width: 220px;
   border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.project:hover img {
-  transform: scale(1.04);
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 7px 14px;
-  background: #3B82F6;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 14px;
 }
 
 /* FOOTER */
@@ -259,6 +264,8 @@ footer {
 
 <!-- NAV -->
 <div class="tabs">
+  <span class="tab-indicator"></span>
+
   <button class="tab-btn active" onclick="showTab(event,'impact')">Impact</button>
   <button class="tab-btn" onclick="showTab(event,'projects')">Projects</button>
   <button class="tab-btn" onclick="showTab(event,'background')">Background</button>
@@ -291,7 +298,7 @@ footer {
       <p><b>Problem:</b> Identify high-risk borrowers</p>
       <p><b>Approach:</b> Built scoring model</p>
       <p><b>Result:</b> Improved risk-based decisions</p>
-      <a class="btn" href="https://github.com/cwawire/Credit-Risk-Modelling-Credit-Scoring" target="_blank">View Project</a>
+      <a class="btn" href="credit.html" target="_blank">Case Study</a>
     </div>
   </div>
 
@@ -335,8 +342,7 @@ footer {
       <p style="font-size:12px; color:#3b82f6;">Data Analysis • Economic Insight • Real-World Impact</p>
       <p style="font-size:12px; color:#94a3b8;">Published on Medium</p>
       <p>
-        Kenya’s inflation rate may appear stable on paper, but everyday costs tell a different story. 
-        This article explores the gap between headline inflation and lived experience.
+        Kenya’s inflation rate may appear stable on paper, but everyday costs tell a different story.
       </p>
       <a class="btn" href="https://medium.com/@clydewawire18/why-kenyas-4-4-inflation-doesn-t-feel-like-4-4-276f932deff7" target="_blank">Read Article</a>
     </div>
@@ -353,16 +359,29 @@ footer {
 function showTab(evt, tabId) {
   const sections = document.querySelectorAll(".section");
   const buttons = document.querySelectorAll(".tab-btn");
+  const indicator = document.querySelector(".tab-indicator");
 
   sections.forEach(s => s.classList.remove("active"));
   buttons.forEach(b => b.classList.remove("active"));
 
+  const activeBtn = evt.currentTarget;
+  activeBtn.classList.add("active");
+
+  indicator.style.width = activeBtn.offsetWidth + "px";
+  indicator.style.left = activeBtn.offsetLeft + "px";
+
   setTimeout(() => {
     document.getElementById(tabId).classList.add("active");
   }, 50);
-
-  evt.currentTarget.classList.add("active");
 }
+
+window.addEventListener("load", () => {
+  const activeBtn = document.querySelector(".tab-btn.active");
+  const indicator = document.querySelector(".tab-indicator");
+
+  indicator.style.width = activeBtn.offsetWidth + "px";
+  indicator.style.left = activeBtn.offsetLeft + "px";
+});
 
 function copyEmail() {
   const email = "clydewawire18@gmail.com";
