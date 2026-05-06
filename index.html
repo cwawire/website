@@ -23,12 +23,27 @@ body {
   flex-wrap: wrap;
 }
 
-.hero img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #1e293b;
+.hero img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center top;
+  border:3px solid #1e293b;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+.hero{
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:260px;
+  height:260px;
+  background:radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+  border-radius:50%;
+  z-index:-1;
 }
 
 .hero-text {
