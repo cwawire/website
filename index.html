@@ -6,33 +6,21 @@
 <title>Clyde Wawire | Data Analyst</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: system-ui;
-  background: #0f172a;
-  color: #e2e8f0;
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#0f172a;
+  color:#e2e8f0;
 }
 
 /* HERO */
-.hero {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  flex-wrap: wrap;
-}
-
-.hero img{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  object-fit:cover;
-  object-position:center top;
-  border:3px solid #1e293b;
-  box-shadow:0 10px 30px rgba(0,0,0,0.35);
-}
 .hero{
+  display:flex;
+  gap:40px;
+  align-items:center;
+  justify-content:center;
+  padding:60px 20px;
+  flex-wrap:wrap;
   position:relative;
 }
 
@@ -46,206 +34,229 @@ body {
   z-index:-1;
 }
 
-.hero-text {
-  max-width: 520px;
+.hero img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center top;
+  border:3px solid #1e293b;
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
 }
 
-.hero-text p {
-  color: #94a3b8;
-  line-height: 1.6;
+.hero-text{
+  max-width:520px;
+}
+
+.hero-text p{
+  color:#94a3b8;
+  line-height:1.7;
 }
 
 /* LINKS */
-.links {
-  margin-top: 15px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
+.links{
+  margin-top:18px;
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  align-items:center;
 }
 
-.links a, .email-copy {
-  font-size: 14px;
-  color: #60a5fa;
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 32px;
+.links a,
+.email-copy{
+  font-size:14px;
+  color:#60a5fa;
+  text-decoration:none;
+  cursor:pointer;
+  line-height:32px;
 }
 
 /* TOOLTIP */
-.email-copy {
-  position: relative;
+.email-copy{
+  position:relative;
 }
 
-.tooltip {
-  position: absolute;
-  bottom: -34px;
-  left: 50%;
-  transform: translateX(-50%) translateY(5px);
-  background: #020617;
-  color: #e2e8f0;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: all 0.25s ease;
+.tooltip{
+  position:absolute;
+  bottom:-34px;
+  left:50%;
+  transform:translateX(-50%) translateY(5px);
+  background:#020617;
+  color:#e2e8f0;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+  white-space:nowrap;
+  opacity:0;
+  transition:all 0.25s ease;
 }
 
-.email-copy:hover .tooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
+.email-copy:hover .tooltip{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
 }
 
-.tooltip.copied {
-  background: #16a34a;
-  color: white;
+.tooltip.copied{
+  background:#16a34a;
+  color:white;
 }
 
-/* BUTTON (PREMIUM) */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 32px;
-  padding: 0 16px;
-  background: linear-gradient(135deg, #3B82F6, #2563EB);
-  color: white;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.25s ease;
+/* BUTTON */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:34px;
+  padding:0 16px;
+  background:linear-gradient(135deg,#3B82F6,#2563EB);
+  color:white;
+  border-radius:6px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  transition:all 0.25s ease;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(59,130,246,0.35);
-  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(59,130,246,0.35);
 }
 
-.btn:active {
-  transform: translateY(0);
-  box-shadow: 0 3px 8px rgba(59,130,246,0.25);
+/* NAVIGATION */
+.tabs{
+  position:relative;
+  display:flex;
+  gap:25px;
+  padding:18px;
+  border-top:1px solid #1e293b;
+  border-bottom:1px solid #1e293b;
+  overflow-x:auto;
 }
 
-/* NAV */
-.tabs {
-  position: relative;
-  display: flex;
-  gap: 25px;
-  padding: 18px;
-  border-top: 1px solid #1e293b;
-  border-bottom: 1px solid #1e293b;
-  overflow-x: auto;
+.tabs button{
+  background:none;
+  border:none;
+  color:#94a3b8;
+  cursor:pointer;
+  font-size:17px;
+  font-weight:600;
+  padding:8px 10px;
+  position:relative;
+  z-index:1;
 }
 
-.tabs button {
-  background: none;
-  border: none;
-  color: #94a3b8;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 8px 10px;
-  position: relative;
-  z-index: 1;
+.tabs button.active{
+  color:#3b82f6;
 }
 
-.tabs button.active {
-  color: #3b82f6;
+.tab-indicator{
+  position:absolute;
+  bottom:0;
+  height:2px;
+  width:0;
+  background:#3b82f6;
+  transition:all 0.3s ease;
 }
 
-/* SLIDING INDICATOR */
-.tab-indicator {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background: #3b82f6;
-  transition: all 0.3s ease;
+/* SECTIONS */
+.section{
+  display:none;
+  max-width:1000px;
+  margin:40px auto;
+  padding:0 20px;
+  opacity:0;
+  transform:translateY(10px);
+  transition:all 0.3s ease;
 }
 
-/* SECTION */
-.section {
-  display: none;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-}
-
-.section.active {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+.section.active{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* IMPACT */
-.impact {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
-  gap: 20px;
+.impact{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
 }
 
-.impact div {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+.impact div{
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
 }
 
-.impact h3 {
-  color: #3b82f6;
-  font-size: 30px;
-  font-weight: 700;
+.impact h3{
+  color:#3b82f6;
+  font-size:30px;
+  font-weight:700;
 }
 
-.impact p {
-  font-size: 15px;
-  color: #cbd5f5;
+.impact p{
+  font-size:15px;
+  color:#cbd5f5;
 }
 
-/* PROJECT */
-.project {
-  display: flex;
-  gap: 20px;
-  background: #1e293b;
-  padding: 18px;
-  border-radius: 10px;
-  margin-top: 20px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+/* PROJECTS */
+.project{
+  display:flex;
+  gap:20px;
+  background:#1e293b;
+  padding:18px;
+  border-radius:12px;
+  margin-top:20px;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.project:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+.project:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
 }
 
-.project img {
-  width: 100%;
-  max-width: 220px;
-  border-radius: 8px;
+.project img{
+  width:100%;
+  max-width:240px;
+  border-radius:10px;
+  object-fit:cover;
+}
+
+.project h3{
+  margin-top:0;
+}
+
+.project p{
+  color:#cbd5e1;
+  line-height:1.6;
 }
 
 /* FOOTER */
-footer {
-  background: #020617;
-  text-align: center;
-  padding: 30px;
-  border-top: 1px solid #1E293B;
-  color: #94a3b8;
-  margin-top: 60px;
-  font-size: 14px;
+footer{
+  background:#020617;
+  text-align:center;
+  padding:30px;
+  border-top:1px solid #1E293B;
+  color:#94a3b8;
+  margin-top:60px;
+  font-size:14px;
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-  .hero { text-align: center; }
-  .project { flex-direction: column; }
-  .project img { max-width: 100%; }
+@media (max-width:768px){
+
+  .hero{
+    text-align:center;
+  }
+
+  .project{
+    flex-direction:column;
+  }
+
+  .project img{
+    max-width:100%;
+  }
 }
 </style>
 </head>
@@ -254,100 +265,208 @@ footer {
 
 <!-- HERO -->
 <div class="hero">
+
   <img src="me.jpg" alt="Clyde Wawire">
 
   <div class="hero-text">
+
     <h1>Clyde Wawire</h1>
+
     <p style="color:#3b82f6;">
       Data Analyst • Performance & Operations • Business Intelligence
     </p>
+
+    <p>
       I analyze performance and behavioral data to understand how systems, teams, and users operate, identify gaps, and drive measurable improvements.
     </p>
 
     <div class="links">
+
       <div class="email-copy" onclick="copyEmail()">
         Email
-        <span id="email-tooltip" class="tooltip">clydewawire18@gmail.com</span>
+        <span id="email-tooltip" class="tooltip">
+          clydewawire18@gmail.com
+        </span>
       </div>
-      <a href="https://linkedin.com/in/clyde-wawire" target="_blank">LinkedIn</a>
-      <a href="https://github.com/cwawire" target="_blank">GitHub</a>
-      <a href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">CV</a>
-      <a href="https://clydewawire.substack.com/" target="_blank" class="btn">Subscribe</a>
+
+      <a href="https://linkedin.com/in/clyde-wawire" target="_blank">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/cwawire" target="_blank">
+        GitHub
+      </a>
+
+      <a href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">
+        CV
+      </a>
+
+      <a href="https://clydewawire.substack.com/" target="_blank" class="btn">
+        Subscribe
+      </a>
+
     </div>
+
   </div>
+
 </div>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <div class="tabs">
+
   <span class="tab-indicator"></span>
 
-  <button class="tab-btn active" onclick="showTab(event,'impact')">Impact</button>
-  <button class="tab-btn" onclick="showTab(event,'projects')">Projects</button>
-  <button class="tab-btn" onclick="showTab(event,'background')">Background</button>
-  <button class="tab-btn" onclick="showTab(event,'insights')">Insights & Articles</button>
+  <button class="tab-btn active" onclick="showTab(event,'impact')">
+    Impact
+  </button>
+
+  <button class="tab-btn" onclick="showTab(event,'projects')">
+    Projects
+  </button>
+
+  <button class="tab-btn" onclick="showTab(event,'background')">
+    Background
+  </button>
+
+  <button class="tab-btn" onclick="showTab(event,'insights')">
+    Insights & Articles
+  </button>
+
 </div>
 
 <!-- IMPACT -->
 <div id="impact" class="section active">
+
   <div class="impact">
-    <div><h3>95%</h3><p>Occupancy</p></div>
-    <div><h3>3%</h3><p>Idle Time</p></div>
-    <div><h3>95%</h3><p>Quality</p></div>
-    <div><h3>85–92%</h3><p>Utilization</p></div>
+
+    <div>
+      <h3>95%</h3>
+      <p>Occupancy</p>
+    </div>
+
+    <div>
+      <h3>3%</h3>
+      <p>Idle Time</p>
+    </div>
+
+    <div>
+      <h3>95%</h3>
+      <p>Quality</p>
+    </div>
+
+    <div>
+      <h3>85–92%</h3>
+      <p>Utilization</p>
+    </div>
+
   </div>
 
   <ul>
-  <li>Achieved and sustained <b>95% workforce occupancy</b>, ensuring optimal utilization of available capacity</li>
-  
-  <li>Reduced idle time to <b>3%</b>, minimizing unproductive hours and improving operational efficiency</li>
-  
-  <li>Maintained <b>95% quality performance</b>, ensuring consistent delivery standards across operations</li>
-  
-  <li>Optimized billable hour allocation within the <b>85–92% target range</b> across production, coaching, and team activities</li>
-  
-  <li>Contributed to improved overall performance, supporting a <b>25% increase in productivity</b></li>
-</ul>
+    <li>Achieved and sustained <b>95% workforce occupancy</b></li>
+    <li>Reduced idle time to <b>3%</b></li>
+    <li>Maintained <b>95% quality performance</b></li>
+    <li>Optimized billable hour allocation within the <b>85–92% target range</b></li>
+    <li>Supported a <b>25% increase in productivity</b></li>
+  </ul>
+
 </div>
 
 <!-- PROJECTS -->
 <div id="projects" class="section">
+
+  <!-- CREDIT -->
   <div class="project">
+
     <img src="assets/credit.jpg">
+
     <div>
+
       <h3>Credit Risk Model</h3>
-      <p><b>Problem:</b> Identify high-risk borrowers</p>
-      <p><b>Approach:</b> Built scoring model</p>
-      <p><b>Result:</b> Improved risk-based decisions</p>
-      <a class="btn" href="credit.html" target="_blank">Case Study</a>
+
+      <p>
+        <b>Problem:</b> Identify high-risk borrowers
+      </p>
+
+      <p>
+        <b>Approach:</b> Built a predictive scoring model
+      </p>
+
+      <p>
+        <b>Result:</b> Improved risk-based lending decisions
+      </p>
+
+      <a class="btn" href="credit.html" target="_blank">
+        Case Study
+      </a>
+
     </div>
+
   </div>
 
+  <!-- AIRLINE -->
   <div class="project">
+
     <img src="assets/airline.jpg">
+
     <div>
+
       <h3>Airline Price Prediction</h3>
-      <p><b>Problem:</b> Price variability</p>
-      <p><b>Approach:</b> Regression model</p>
-      <p><b>Result:</b> Identified key drivers</p>
-      <a class="btn" href="https://github.com/cwawire/Airline-Ticket-Price-Prediction" target="_blank">View Project</a>
+
+      <p>
+        <b>Problem:</b> High variability in airline ticket prices
+      </p>
+
+      <p>
+        <b>Approach:</b> Built a regression-based prediction model
+      </p>
+
+      <p>
+        <b>Result:</b> Identified major pricing drivers
+      </p>
+
+      <a class="btn"
+         href="https://github.com/cwawire/Airline-Ticket-Price-Prediction"
+         target="_blank">
+
+         View Project
+      </a>
+
     </div>
+
   </div>
-</div>
 
-   <div class="project">
-  <img src="assets/telecom-dashboard.jpg">
-  
-  <div>
-    <h3>Kenya Telecom Sector Performance Dashboard</h3>
+  <!-- TELECOM -->
+  <div class="project">
 
-    <p><b>Problem:</b> Telecom sector data across multiple quarterly PDF reports was fragmented, inconsistent, and difficult to analyze for strategic insights.</p>
+    <img src="assets/telecom-dashboard.jpg">
 
-    <p><b>Approach:</b> Extracted, cleaned, and consolidated Communications Authority of Kenya (CA) ICT sector statistics into a unified Power BI dashboard using Power Query, DAX, KPI modeling, indexed trend analysis, and interactive visualizations.</p>
+    <div>
 
-    <p><b>Result:</b> Delivered a multi-page executive dashboard revealing trends in mobile money growth, smartphone adoption, broadband utilization, telecom traffic, and cybersecurity performance across FY2024/25–FY2025/26.</p>
+      <h3>Kenya Telecom Sector Performance Dashboard</h3>
 
-    <a class="btn" href="https://github.com/cwawire" target="_blank">View Project</a>
+      <p>
+        <b>Problem:</b> Telecom sector data across quarterly reports was fragmented and difficult to analyze.
+      </p>
+
+      <p>
+        <b>Approach:</b> Consolidated CA Kenya ICT statistics into a Power BI dashboard using Power Query, DAX, KPI modeling, and indexed trend analysis.
+      </p>
+
+      <p>
+        <b>Result:</b> Delivered a multi-page executive dashboard highlighting trends in mobile money, broadband usage, smartphone adoption, telecom traffic, and cybersecurity metrics.
+      </p>
+
+      <a class="btn"
+         href="https://github.com/cwawire"
+         target="_blank">
+
+         View Project
+      </a>
+
+    </div>
+
   </div>
+
 </div>
 
 <!-- BACKGROUND -->
@@ -358,33 +477,30 @@ footer {
   </p>
 
   <p>
-    Over the past 7 years, I’ve progressed from data entry to team leadership and into data analytics and business intelligence. That progression shapes how I approach analysis, with a focus on what drives performance and how it can be improved.
+    Over the past 7 years, I’ve progressed from data entry to team leadership and into data analytics and business intelligence.
   </p>
 
   <p>
-    I’ve built dashboards, automated reporting, and worked closely with Operations, Training, and Workforce Management teams to identify gaps, improve workflows, and turn reporting into something teams actively use.
+    I’ve built dashboards, automated reporting systems, and collaborated with Operations, Training, and Workforce Management teams to improve reporting accuracy and workflow efficiency.
   </p>
 
   <ul>
     <li>Increased utilization to <b>95%</b></li>
     <li>Reduced idle time to <b>3%</b></li>
-    <li>Improved reporting turnaround by <b>20%</b> through automation</li>
-    <li>Delivered up to <b>25%</b> improvement in team productivity</li>
+    <li>Improved reporting turnaround by <b>20%</b></li>
+    <li>Delivered up to <b>25%</b> improvement in productivity</li>
   </ul>
 
   <p>
-    I primarily work with SQL, Python, and Power BI, but the focus is always on making data practical, usable, and tied to real business outcomes.
+    I primarily work with SQL, Python, and Power BI, focusing on practical analytics tied directly to business outcomes.
   </p>
 
-  <p>
-    While much of my experience comes from operations-focused environments, my approach applies across industries where data can improve efficiency, performance, and decision-making.
-  </p>
+  <a class="btn"
+     href="Clyde_Wawire_Data_Analyst_CV.pdf"
+     target="_blank">
 
-  <p>
-    I am currently open to roles across Data, BI, Product, and Analytics Engineering.
-  </p>
-
-  <a class="btn" href="Clyde_Wawire_Data_Analyst_CV.pdf" target="_blank">Open CV</a>
+     Open CV
+  </a>
 
 </div>
 
@@ -392,26 +508,59 @@ footer {
 <div id="insights" class="section">
 
   <div class="project">
+
     <div>
+
       <h3>What the Numbers Miss</h3>
-      <p style="font-size:12px; color:#94a3b8;">Newsletter on Substack</p>
-      <p>
-        I write about how data is interpreted in real-world contexts, especially where metrics don’t fully reflect what people experience.
+
+      <p style="font-size:12px; color:#94a3b8;">
+        Newsletter on Substack
       </p>
-      <a class="btn" href="https://clydewawire.substack.com/" target="_blank">Subscribe</a>
+
+      <p>
+        I write about data interpretation, analytics, operational insights, and how metrics connect to real-world experiences.
+      </p>
+
+      <a class="btn"
+         href="https://clydewawire.substack.com/"
+         target="_blank">
+
+         Subscribe
+      </a>
+
     </div>
+
   </div>
 
   <div class="project">
+
     <div>
-      <h3>Why Kenya’s 4.4% Inflation Doesn’t Feel Like 4.4%</h3>
-      <p style="font-size:12px; color:#3b82f6;">Data Analysis • Economic Insight • Real-World Impact</p>
-      <p style="font-size:12px; color:#94a3b8;">Published on Medium</p>
-      <p>
-        Kenya’s inflation rate may appear stable on paper, but everyday costs tell a different story.
+
+      <h3>
+        Why Kenya’s 4.4% Inflation Doesn’t Feel Like 4.4%
+      </h3>
+
+      <p style="font-size:12px; color:#3b82f6;">
+        Data Analysis • Economic Insight • Real-World Impact
       </p>
-      <a class="btn" href="https://medium.com/@clydewawire18/why-kenyas-4-4-inflation-doesn-t-feel-like-4-4-276f932deff7" target="_blank">Read Article</a>
+
+      <p style="font-size:12px; color:#94a3b8;">
+        Published on Medium
+      </p>
+
+      <p>
+        Kenya’s inflation rate may appear stable statistically, but daily consumer experience tells a different story.
+      </p>
+
+      <a class="btn"
+         href="https://medium.com/@clydewawire18/why-kenyas-4-4-inflation-doesn-t-feel-like-4-4-276f932deff7"
+         target="_blank">
+
+         Read Article
+      </a>
+
     </div>
+
   </div>
 
 </div>
@@ -422,15 +571,23 @@ footer {
 </footer>
 
 <script>
-function showTab(evt, tabId) {
+
+function showTab(evt, tabId){
+
   const sections = document.querySelectorAll(".section");
   const buttons = document.querySelectorAll(".tab-btn");
   const indicator = document.querySelector(".tab-indicator");
 
-  sections.forEach(s => s.classList.remove("active"));
-  buttons.forEach(b => b.classList.remove("active"));
+  sections.forEach(section => {
+    section.classList.remove("active");
+  });
+
+  buttons.forEach(button => {
+    button.classList.remove("active");
+  });
 
   const activeBtn = evt.currentTarget;
+
   activeBtn.classList.add("active");
 
   indicator.style.width = activeBtn.offsetWidth + "px";
@@ -438,10 +595,11 @@ function showTab(evt, tabId) {
 
   setTimeout(() => {
     document.getElementById(tabId).classList.add("active");
-  }, 50);
+  },50);
 }
 
 window.addEventListener("load", () => {
+
   const activeBtn = document.querySelector(".tab-btn.active");
   const indicator = document.querySelector(".tab-indicator");
 
@@ -449,7 +607,8 @@ window.addEventListener("load", () => {
   indicator.style.left = activeBtn.offsetLeft + "px";
 });
 
-function copyEmail() {
+function copyEmail(){
+
   const email = "clydewawire18@gmail.com";
   const tooltip = document.getElementById("email-tooltip");
 
@@ -459,10 +618,13 @@ function copyEmail() {
   tooltip.classList.add("copied");
 
   setTimeout(() => {
+
     tooltip.innerText = email;
     tooltip.classList.remove("copied");
-  }, 1500);
+
+  },1500);
 }
+
 </script>
 
 </body>
