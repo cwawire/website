@@ -3,23 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Clyde Wawire | Data Analyst</title>
 
 <style>
+
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
-  font-family:system-ui;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:#0f172a;
   color:#e2e8f0;
+  scroll-behavior:smooth;
 }
 
 /* HERO */
+
 .hero{
   display:flex;
   gap:40px;
   align-items:center;
   justify-content:center;
-  padding:60px 20px;
+  padding:70px 20px;
   flex-wrap:wrap;
   position:relative;
 }
@@ -27,35 +35,42 @@ body{
 .hero::before{
   content:"";
   position:absolute;
-  width:260px;
-  height:260px;
-  background:radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+  width:280px;
+  height:280px;
+  background:radial-gradient(circle, rgba(59,130,246,0.18), transparent 70%);
   border-radius:50%;
   z-index:-1;
 }
 
 .hero img{
-  width:180px;
-  height:180px;
+  width:190px;
+  height:190px;
   border-radius:50%;
   object-fit:cover;
   object-position:center top;
   border:3px solid #1e293b;
-  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .hero-text{
-  max-width:520px;
+  max-width:560px;
+}
+
+.hero-text h1{
+  font-size:42px;
+  margin-bottom:8px;
 }
 
 .hero-text p{
   color:#94a3b8;
-  line-height:1.7;
+  line-height:1.8;
+  margin-top:14px;
 }
 
 /* LINKS */
+
 .links{
-  margin-top:18px;
+  margin-top:22px;
   display:flex;
   gap:18px;
   flex-wrap:wrap;
@@ -68,10 +83,11 @@ body{
   color:#60a5fa;
   text-decoration:none;
   cursor:pointer;
-  line-height:32px;
+  line-height:34px;
 }
 
 /* TOOLTIP */
+
 .email-copy{
   position:relative;
 }
@@ -102,17 +118,18 @@ body{
 }
 
 /* BUTTON */
+
 .btn{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  height:34px;
+  height:36px;
   padding:0 16px;
   background:linear-gradient(135deg,#3B82F6,#2563EB);
-  color:white;
-  border-radius:6px;
+  color:white !important;
+  border-radius:7px;
   font-size:14px;
-  font-weight:500;
+  font-weight:600;
   text-decoration:none;
   transition:all 0.25s ease;
 }
@@ -123,6 +140,7 @@ body{
 }
 
 /* NAVIGATION */
+
 .tabs{
   position:relative;
   display:flex;
@@ -138,11 +156,12 @@ body{
   border:none;
   color:#94a3b8;
   cursor:pointer;
-  font-size:17px;
+  font-size:16px;
   font-weight:600;
   padding:8px 10px;
   position:relative;
   z-index:1;
+  transition:color 0.2s ease;
 }
 
 .tabs button.active{
@@ -159,10 +178,11 @@ body{
 }
 
 /* SECTIONS */
+
 .section{
   display:none;
-  max-width:1000px;
-  margin:40px auto;
+  max-width:1050px;
+  margin:50px auto;
   padding:0 20px;
   opacity:0;
   transform:translateY(10px);
@@ -176,6 +196,7 @@ body{
 }
 
 /* IMPACT */
+
 .impact{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -184,30 +205,39 @@ body{
 
 .impact div{
   background:#1e293b;
-  padding:20px;
-  border-radius:10px;
+  padding:24px;
+  border-radius:12px;
   text-align:center;
+  border:1px solid #334155;
+  transition:transform 0.25s ease;
+}
+
+.impact div:hover{
+  transform:translateY(-4px);
 }
 
 .impact h3{
   color:#3b82f6;
-  font-size:30px;
-  font-weight:700;
+  font-size:32px;
+  margin:0;
 }
 
 .impact p{
   font-size:15px;
-  color:#cbd5f5;
+  color:#cbd5e1;
+  margin-top:10px;
 }
 
 /* PROJECTS */
+
 .project{
   display:flex;
-  gap:20px;
+  gap:22px;
   background:#1e293b;
-  padding:18px;
-  border-radius:12px;
-  margin-top:20px;
+  padding:20px;
+  border-radius:14px;
+  margin-top:22px;
+  border:1px solid #334155;
   transition:transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -218,36 +248,59 @@ body{
 
 .project img{
   width:100%;
-  max-width:240px;
-  border-radius:10px;
+  max-width:260px;
+  height:180px;
+  border-radius:12px;
   object-fit:cover;
+  border:1px solid #334155;
+  background:#0f172a;
+  transition:transform 0.3s ease;
+}
+
+.project:hover img{
+  transform:scale(1.02);
 }
 
 .project h3{
   margin-top:0;
+  margin-bottom:8px;
 }
 
 .project p{
   color:#cbd5e1;
-  line-height:1.6;
+  line-height:1.7;
+}
+
+/* LISTS */
+
+ul{
+  color:#cbd5e1;
+  line-height:1.8;
+  padding-left:22px;
 }
 
 /* FOOTER */
+
 footer{
   background:#020617;
   text-align:center;
   padding:30px;
   border-top:1px solid #1E293B;
   color:#94a3b8;
-  margin-top:60px;
+  margin-top:70px;
   font-size:14px;
 }
 
 /* MOBILE */
+
 @media (max-width:768px){
 
   .hero{
     text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:34px;
   }
 
   .project{
@@ -256,14 +309,18 @@ footer{
 
   .project img{
     max-width:100%;
+    height:auto;
   }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <!-- HERO -->
+
 <div class="hero">
 
   <img src="me.jpg" alt="Clyde Wawire">
@@ -272,12 +329,12 @@ footer{
 
     <h1>Clyde Wawire</h1>
 
-    <p style="color:#3b82f6;">
-      Data Analyst • Performance & Operations • Business Intelligence
+    <p style="color:#3b82f6; font-weight:600;">
+      Data Analyst • Business Intelligence • Workforce Analytics
     </p>
 
     <p>
-      I analyze performance and behavioral data to understand how systems, teams, and users operate, identify gaps, and drive measurable improvements.
+      I analyze operational, behavioral, and performance data to understand how systems, teams, and users operate, identify inefficiencies, and drive measurable business improvements through analytics and automation.
     </p>
 
     <div class="links">
@@ -312,6 +369,7 @@ footer{
 </div>
 
 <!-- NAVIGATION -->
+
 <div class="tabs">
 
   <span class="tab-indicator"></span>
@@ -335,7 +393,17 @@ footer{
 </div>
 
 <!-- IMPACT -->
+
 <div id="impact" class="section active">
+
+  <p style="
+    color:#94a3b8;
+    line-height:1.8;
+    margin-bottom:28px;
+    max-width:900px;
+  ">
+    The metrics below are derived from operational performance reporting and workforce analytics initiatives delivered at Samasource, focusing on occupancy, utilization, quality performance, workflow efficiency, and productivity optimization.
+  </p>
 
   <div class="impact">
 
@@ -372,27 +440,29 @@ footer{
 </div>
 
 <!-- PROJECTS -->
+
 <div id="projects" class="section">
 
   <!-- CREDIT -->
+
   <div class="project">
 
-    <img src="assets/credit.jpg">
+    <img src="assets/credit.jpg" alt="Credit Risk Model">
 
     <div>
 
       <h3>Credit Risk Model</h3>
 
       <p>
-        <b>Problem:</b> Identify high-risk borrowers
+        <b>Problem:</b> Identify high-risk borrowers.
       </p>
 
       <p>
-        <b>Approach:</b> Built a predictive scoring model
+        <b>Approach:</b> Built a predictive scoring model using historical borrower data and classification techniques.
       </p>
 
       <p>
-        <b>Result:</b> Improved risk-based lending decisions
+        <b>Result:</b> Improved risk-based lending decisions and customer risk segmentation.
       </p>
 
       <a class="btn" href="credit.html" target="_blank">
@@ -404,24 +474,25 @@ footer{
   </div>
 
   <!-- AIRLINE -->
+
   <div class="project">
 
-    <img src="assets/airline.jpg">
+    <img src="assets/airline.jpg" alt="Airline Ticket Price Prediction">
 
     <div>
 
       <h3>Airline Price Prediction</h3>
 
       <p>
-        <b>Problem:</b> High variability in airline ticket prices
+        <b>Problem:</b> Airline ticket prices fluctuate significantly across routes and seasons.
       </p>
 
       <p>
-        <b>Approach:</b> Built a regression-based prediction model
+        <b>Approach:</b> Built a regression-based machine learning model to predict ticket pricing patterns.
       </p>
 
       <p>
-        <b>Result:</b> Identified major pricing drivers
+        <b>Result:</b> Identified major pricing drivers and improved pricing visibility.
       </p>
 
       <a class="btn"
@@ -429,6 +500,7 @@ footer{
          target="_blank">
 
          View Project
+
       </a>
 
     </div>
@@ -436,32 +508,56 @@ footer{
   </div>
 
   <!-- TELECOM -->
+
   <div class="project">
 
-    <img src="assets/telecom-dashboard.jpg">
+    <img src="assets/kenya-telecom-dashboard.png"
+         alt="Kenya Telecom Sector Performance Dashboard">
 
     <div>
 
       <h3>Kenya Telecom Sector Performance Dashboard</h3>
 
-      <p>
-        <b>Problem:</b> Telecom sector data across quarterly reports was fragmented and difficult to analyze.
+      <p style="
+        font-size:12px;
+        color:#3b82f6;
+        margin-bottom:10px;
+      ">
+        Power BI • Telecommunications Analytics • KPI Monitoring
       </p>
 
       <p>
-        <b>Approach:</b> Consolidated CA Kenya ICT statistics into a Power BI dashboard using Power Query, DAX, KPI modeling, and indexed trend analysis.
+        <b>Problem:</b> Telecom sector statistics across CA Kenya quarterly reports were fragmented, making trend analysis and executive reporting difficult.
       </p>
 
       <p>
-        <b>Result:</b> Delivered a multi-page executive dashboard highlighting trends in mobile money, broadband usage, smartphone adoption, telecom traffic, and cybersecurity metrics.
+        <b>Approach:</b> Consolidated ICT sector datasets into a centralized Power BI dashboard using Power Query, DAX measures, KPI modeling, indexed trend analysis, and automated reporting workflows.
       </p>
 
-      <a class="btn"
-         href="https://github.com/cwawire"
-         target="_blank">
+      <p>
+        <b>Key Metrics Tracked:</b> Mobile subscriptions, mobile money adoption, broadband penetration, smartphone usage, telecom traffic, cybersecurity incidents, and internet usage trends.
+      </p>
 
-         View Project
-      </a>
+      <p>
+        <b>Result:</b> Delivered a multi-page executive dashboard enabling faster sector analysis, clearer KPI monitoring, and improved visibility into Kenya’s evolving telecom ecosystem.
+      </p>
+
+      <div style="
+        display:flex;
+        gap:12px;
+        flex-wrap:wrap;
+        margin-top:18px;
+      ">
+
+        <a class="btn"
+           href="https://github.com/cwawire"
+           target="_blank">
+
+           View Project
+
+        </a>
+
+      </div>
 
     </div>
 
@@ -470,18 +566,19 @@ footer{
 </div>
 
 <!-- BACKGROUND -->
+
 <div id="background" class="section">
 
   <p>
-    I work at the intersection of operations, workforce analytics, and business performance, using data to understand how teams and systems operate and where improvements can be made.
+    I work at the intersection of operations, workforce analytics, and business performance, using data to understand how teams and systems operate and where measurable improvements can be made.
   </p>
 
   <p>
-    Over the past 7 years, I’ve progressed from data entry to team leadership and into data analytics and business intelligence.
+    Over the past 7 years, I’ve progressed from data entry and annotation operations into team leadership, analytics, automation, and business intelligence.
   </p>
 
   <p>
-    I’ve built dashboards, automated reporting systems, and collaborated with Operations, Training, and Workforce Management teams to improve reporting accuracy and workflow efficiency.
+    I’ve built dashboards, automated reporting systems, and collaborated with Operations, Training, and Workforce Management teams to improve reporting accuracy, workforce utilization, and workflow efficiency.
   </p>
 
   <ul>
@@ -492,7 +589,7 @@ footer{
   </ul>
 
   <p>
-    I primarily work with SQL, Python, and Power BI, focusing on practical analytics tied directly to business outcomes.
+    I primarily work with SQL, Python, Power BI, and data automation workflows, focusing on practical analytics tied directly to operational and business outcomes.
   </p>
 
   <a class="btn"
@@ -500,11 +597,13 @@ footer{
      target="_blank">
 
      Open CV
+
   </a>
 
 </div>
 
 <!-- INSIGHTS -->
+
 <div id="insights" class="section">
 
   <div class="project">
@@ -518,7 +617,7 @@ footer{
       </p>
 
       <p>
-        I write about data interpretation, analytics, operational insights, and how metrics connect to real-world experiences.
+        I write about data interpretation, analytics, operations, workforce performance, and how metrics connect to real-world experiences.
       </p>
 
       <a class="btn"
@@ -526,6 +625,7 @@ footer{
          target="_blank">
 
          Subscribe
+
       </a>
 
     </div>
@@ -549,7 +649,7 @@ footer{
       </p>
 
       <p>
-        Kenya’s inflation rate may appear stable statistically, but daily consumer experience tells a different story.
+        Kenya’s inflation rate may appear stable statistically, but daily consumer experience often reflects a very different economic reality.
       </p>
 
       <a class="btn"
@@ -557,6 +657,7 @@ footer{
          target="_blank">
 
          Read Article
+
       </a>
 
     </div>
@@ -566,6 +667,7 @@ footer{
 </div>
 
 <!-- FOOTER -->
+
 <footer>
   <p>© 2026 Clyde Wawire</p>
 </footer>
@@ -596,6 +698,7 @@ function showTab(evt, tabId){
   setTimeout(() => {
     document.getElementById(tabId).classList.add("active");
   },50);
+
 }
 
 window.addEventListener("load", () => {
@@ -605,6 +708,7 @@ window.addEventListener("load", () => {
 
   indicator.style.width = activeBtn.offsetWidth + "px";
   indicator.style.left = activeBtn.offsetLeft + "px";
+
 });
 
 function copyEmail(){
@@ -623,6 +727,7 @@ function copyEmail(){
     tooltip.classList.remove("copied");
 
   },1500);
+
 }
 
 </script>
